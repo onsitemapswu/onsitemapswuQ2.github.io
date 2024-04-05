@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <title>Onsite Map</title>
+
+    <style>
+        #my_map {
+            height: 800px;
+            width: 1500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Onsite Locations 2024-Q2</h1>
+    <p>LACA Onsite Map</p>
+
+    <div id="my_map"></div>
+    <script>
+        var map=L.map("my_map").setView([9.95453,-84.19010], 10);
+        L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png?", {}).addTo(map)
+
+        var greenIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+        });
+        
+         L.marker([9.9529,-84.2025], {icon: greenIcon}).addTo(map).bindPopup("WU Office Santa Ana, CR").openPopup()
+         L.marker([19.4588,-99.0493], {icon: greenIcon}).addTo(map).bindPopup("WU Office Mexico City, MX").openPopup()
+         L.marker([25.6536,-100.2914], {icon: greenIcon}).addTo(map).bindPopup("WU Office Monterrey, MX").openPopup()
+         L.marker([9.0814152,-79.4531372], {icon: greenIcon}).addTo(map).bindPopup("WU Office Panama City, PA").openPopup()
+         L.marker([-11.5506,-76.8658], {icon: greenIcon}).addTo(map).bindPopup("WU Office Peru, PE").openPopup()
+         L.marker([-23.609,-47.131], {icon: greenIcon}).addTo(map).bindPopup("WU Office Brazil, BR").openPopup()
+         L.marker([-34.812039,-58.0199888], {icon: greenIcon}).addTo(map).bindPopup("WU Office Argentina, AR").openPopup()
+         L.marker([13.1902,-59.5355], {icon: greenIcon}).addTo(map).bindPopup("WU Office Barbados, BA").openPopup()
+
+
+        L.marker(-34.639452,-58.526413).add(map).bindPopup("WEST-LINIERS").openPopup()
+        L.marker(-37.996433,-57.552622).add(map).bindPopup("C.S. MAR DEL PLATA III").openPopup()
+        L.marker(-38.000751,-57.545028).add(map).bindPopup("C.S. MAR DEL PLATA II").openPopup()
+        L.marker(-34.595749,-58.427717).add(map).bindPopup("C.S. VILLA CRESPO").openPopup()
+        L.marker(-34.567177,-58.437215).add(map).bindPopup("C.S. SHOPPING SOLAR DE LA ABAD").openPopup()
+        L.marker(.000000,.000000).add(map).bindPopup("C.S. MAR DEL PLATA PUERTO").openPopup()
+        L.marker(.000000,.000000).add(map).bindPopup("C.S. GALERIAS PACIFICO").openPopup()
+        L.marker(-34.588337,-58.423506).add(map).bindPopup("REME URQUIZA MARKET II").openPopup()
+        L.marker(-34.604064,-58.412018).add(map).bindPopup("C.S. ABASTO").openPopup()
+        L.marker(-34.586879,-58.423449).add(map).bindPopup("C.S. PALERMO I").openPopup()
+        L.marker(-32.888706,-68.841552).add(map).bindPopup("COMMODO CENTRAL").openPopup()
+        L.marker(-34.609865,-58.402501).add(map).bindPopup("C.S. ONCE").openPopup()
+        L.marker(-32.896733,-68.833074).add(map).bindPopup("C.S. CARREFOUR MENDOZA GUAYMAL").openPopup()
+        L.marker(-32.892968,-68.839445).add(map).bindPopup("LOCUTORIO ALEM").openPopup()
+        L.marker(-34.606803,-58.424526).add(map).bindPopup("C.S. ALMAGRO").openPopup()
+        L.marker(-32.883674,-68.840286).add(map).bindPopup("C.S. MENDOZA III").openPopup()
+        L.marker(-34.631873,-58.473242).add(map).bindPopup("C.S. FLORESTA").openPopup()
+        L.marker(-34.595430,-58.398331).add(map).bindPopup("SERVICIOS EL TREBOL 6").openPopup()
+        L.marker(9.348372,-79.895793).add(map).bindPopup("GOLD DUST").openPopup()
+        L.marker(18.484990,-69.840440).add(map).bindPopup("AGENTE DE REMESAS Y CAMBIO VIM").openPopup()
+        L.marker(18.466090,-69.819270).add(map).bindPopup("AGENTE DE REMESAS Y CAMBIO VIM").openPopup()
+        L.marker(18.518970,-69.837270).add(map).bindPopup("AGENTE DE REMESAS Y CAMBIO VIM").openPopup()
+        L.marker(19.460979,-70.684573).add(map).bindPopup("SUPERMERCADO CENTRAL  S A").openPopup()
+        L.marker(19.485883,-70.711921).add(map).bindPopup("SUPER PLAZA VENEZUELA").openPopup()
+        L.marker(-33.454830,-70.695420).add(map).bindPopup("OFICINA PRINCIPAL ESTACION CEN").openPopup()
+
+
+
+
+         // create a red polygon from an array of LatLng points
+        //var latlngs1 = [[-33.437237,-70.652423],[-33.402074,-70.642891],[-33.433887,-70.653152]];
+        //var polygon = L.polygon(latlngs1, {color: 'red'}).addTo(map);
+
+        //var latlngs2 = [[8.507948,-80.36196],[9.044618,-79.45079],[8.974279,-79.552591],[8.984647,-79.5235921]];
+        //var polygon = L.polygon(latlngs2, {color: 'red'}).addTo(map);
+
+
+         //leaflet draw
+         var drawFeatures = new L.FeaturesGroup();
+         map.addLayer(drawFeatures);
+
+         var drawControl = new L.Control.Draw({
+            edit: {
+                FeaturesGroup: drawFeatures,
+                remove: false
+            }
+        });
+         map.addControl(drawControl);
+
+         map.on("draw:created", function(e){
+            var type = e.layerType;
+            var layer = e.layer;
+            console.log(e)
+            drawFeatures.addLayer(layer);
+         })
+
+
+    </script>
+
+    
+</body>
+</html>

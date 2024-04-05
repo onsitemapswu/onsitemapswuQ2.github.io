@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <title>Onsite Map</title>
+
+    <style>
+        #my_map {
+            height: 850px;
+            width: 1700px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Onsite Locations 2024-Q2</h1>
+    <p>LACA Onsite Map</p>
+
+    <div id="my_map"></div>
+    <script>
+        var map=L.map("my_map").setView([9.95453,-84.19010], 10);
+        L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png?", {}).addTo(map)
+
+        var greenIcon = new L.Icon({
+        iconUrl: './icon/Building.png',
+        //shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [20, 31],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+        });
+
+
+        var blueIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+        });
+
+        L.marker([9.9529,-84.2025], {icon: greenIcon}).addTo(map).bindPopup("WU Office Santa Ana, CR").openPopup()
+         L.marker([19.4588,-99.0493], {icon: greenIcon}).addTo(map).bindPopup("WU Office Mexico City, MX").openPopup()
+         L.marker([25.6536,-100.2914], {icon: greenIcon}).addTo(map).bindPopup("WU Office Monterrey, MX").openPopup()
+         L.marker([9.0814152,-79.4531372], {icon: greenIcon}).addTo(map).bindPopup("WU Office Panama City, PA").openPopup()
+         L.marker([-11.5506,-76.8658], {icon: greenIcon}).addTo(map).bindPopup("WU Office Peru, PE").openPopup()
+         L.marker([-23.609,-47.131], {icon: greenIcon}).addTo(map).bindPopup("WU Office Brazil, BR").openPopup()
+         L.marker([-34.812039,-58.0199888], {icon: greenIcon}).addTo(map).bindPopup("WU Office Argentina, AR").openPopup()
+         L.marker([13.1902,-59.5355], {icon: greenIcon}).addTo(map).bindPopup("WU Office Barbados, BA").openPopup()
+         
+         
+        //var marker = L.marker([17.509147,-88.205163],{alt: 'Kyiv'}).addTo(map).bindPopup('GADGETS CONEY DRIVE');
+
+//var marker1=L.marker([,],{alt:'GRACE KENNEDY MONEY SERVICES'}).addTo(map).bindPopup("GRACE KENNEDY MONEY SERVICES").openPopup()
+//var marker2=L.marker([,],{alt:'ZITRO INTERNATIONAL LIMITED'}).addTo(map).bindPopup("ZITRO INTERNATIONAL LIMITED").openPopup()
+//var marker3=L.marker([,],{alt:'BELIZE CHAMBER OF COMMERCE (BCCI)'}).addTo(map).bindPopup("BELIZE CHAMBER OF COMMERCE (BCCI)").openPopup()
+var marker4=L.marker([-34.588337,-58.423506],{alt:'REME URQUIZA MARKET II'}).addTo(map).bindPopup("REME URQUIZA MARKET II").openPopup()
+//var marker5=L.marker([.000000,.000000],{alt:'C.S. GALERIAS PACIFICO'}).addTo(map).bindPopup("C.S. GALERIAS PACIFICO").openPopup()
+var marker6=L.marker([14.888023,-92.483045],{alt:'ABARROTES SUANY IMX'}).addTo(map).bindPopup("ABARROTES SUANY IMX").openPopup()
+var marker7=L.marker([17.509147,-88.205163],{alt:'GADGETS CONEY DRIVE'}).addTo(map).bindPopup("GADGETS CONEY DRIVE").openPopup()
+var marker8=L.marker([9.744669,-63.110800],{alt:'ZOOM BOLIVAR'}).addTo(map).bindPopup("ZOOM BOLIVAR").openPopup()
+var marker9=L.marker([17.499520,-88.197560],{alt:'MY PHARMACY'}).addTo(map).bindPopup("MY PHARMACY").openPopup()
+var marker10=L.marker([21.216516,-103.36293],{alt:'TELECOMM 32037'}).addTo(map).bindPopup("TELECOMM 32037").openPopup()
+var marker11=L.marker([14.889938,-92.278188],{alt:'BANCOPPEL 7976 GRAN PATIO TAPA'}).addTo(map).bindPopup("BANCOPPEL 7976 GRAN PATIO TAPA").openPopup()
+var marker12=L.marker([-25.576198,-54.584466],{alt:'APICE CAMBIO PORTO MEIRA'}).addTo(map).bindPopup("APICE CAMBIO PORTO MEIRA").openPopup()
+//var marker13=L.marker([.000000,.000000],{alt:'APICE OKLAHOMA'}).addTo(map).bindPopup("APICE OKLAHOMA").openPopup()
+var marker14=L.marker([-33.357482,-70.729272],{alt:'OFICINA PRINCIPAL QUILICURA'}).addTo(map).bindPopup("OFICINA PRINCIPAL QUILICURA").openPopup()
+var marker15=L.marker([-25.486494,-54.582443],{alt:'APICE CAMBIOS E TURISMO - PETR'}).addTo(map).bindPopup("APICE CAMBIOS E TURISMO - PETR").openPopup()
+var marker16=L.marker([-25.544383,-54.583196],{alt:'APICE CAMBIOS E TURISMO - FILI'}).addTo(map).bindPopup("APICE CAMBIOS E TURISMO - FILI").openPopup()
+var marker17=L.marker([-25.530088,-54.571070],{alt:'APICE CAMBIOS E TURISMO   MATR'}).addTo(map).bindPopup("APICE CAMBIOS E TURISMO   MATR").openPopup()
+var marker18=L.marker([9.006195,-79.532812],{alt:'AM PM NEW DORADO'}).addTo(map).bindPopup("AM PM NEW DORADO").openPopup()
+var marker19=L.marker([-33.454830,-70.695420],{alt:'OFICINA PRINCIPAL ESTACION CEN'}).addTo(map).bindPopup("OFICINA PRINCIPAL ESTACION CEN").openPopup()
+var marker20=L.marker([-33.520420,-70.602070],{alt:'OFICINA PRINCIPAL LA FLORIDA'}).addTo(map).bindPopup("OFICINA PRINCIPAL LA FLORIDA").openPopup()
+var marker21=L.marker([-33.438600,-70.650880],{alt:'OFICINA PRINCIPAL SANTIAGO CEN'}).addTo(map).bindPopup("OFICINA PRINCIPAL SANTIAGO CEN").openPopup()
+//var marker22=L.marker([.000000,.000000],{alt:'C.S. MAR DEL PLATA PUERTO'}).addTo(map).bindPopup("C.S. MAR DEL PLATA PUERTO").openPopup()
+var marker23=L.marker([19.593917,-99.279943],{alt:'CHEDRAUI NICOLAS ROMERO IMX CH'}).addTo(map).bindPopup("CHEDRAUI NICOLAS ROMERO IMX CH").openPopup()
+var marker24=L.marker([9.348372,-79.895793],{alt:'GOLD DUST'}).addTo(map).bindPopup("GOLD DUST").openPopup()
+var marker25=L.marker([-34.595430,-58.398331],{alt:'SERVICIOS EL TREBOL 6'}).addTo(map).bindPopup("SERVICIOS EL TREBOL 6").openPopup()
+var marker26=L.marker([9.001758,-79.516256],{alt:'AM PM VIA ESPANA'}).addTo(map).bindPopup("AM PM VIA ESPANA").openPopup()
+var marker27=L.marker([-38.007229,-57.547527],{alt:'MDQPAGOS ENTRE RIOS'}).addTo(map).bindPopup("MDQPAGOS ENTRE RIOS").openPopup()
+var marker28=L.marker([8.993952,-79.516368],{alt:'AM PM VIA PORRAS'}).addTo(map).bindPopup("AM PM VIA PORRAS").openPopup()
+var marker29=L.marker([8.985543,-79.521677],{alt:'AM PM OBARRIO'}).addTo(map).bindPopup("AM PM OBARRIO").openPopup()
+var marker30=L.marker([8.986034,-79.512751],{alt:'MAS ME DAN CL  50'}).addTo(map).bindPopup("MAS ME DAN CL  50").openPopup()
+var marker31=L.marker([8.516670,-82.616700],{alt:'EMPENOS THORP  BUGABA'}).addTo(map).bindPopup("EMPENOS THORP  BUGABA").openPopup()
+//var marker32=L.marker([.000000,.000000],{alt:'CARIBE EXPRESS SUC POLA ARROYO'}).addTo(map).bindPopup("CARIBE EXPRESS SUC POLA ARROYO").openPopup()
+//var marker33=L.marker([.000000,.000000],{alt:'CARIBE EXPRESS MULTISERVICIOS'}).addTo(map).bindPopup("CARIBE EXPRESS MULTISERVICIOS").openPopup()
+//var marker34=L.marker([.000000,.000000],{alt:'CD XTRA LAS TABLAS MALALA'}).addTo(map).bindPopup("CD XTRA LAS TABLAS MALALA").openPopup()
+var marker35=L.marker([-32.870466,-68.833966],{alt:'COMMODO VEA SANTIAGO DEL ESTER'}).addTo(map).bindPopup("COMMODO VEA SANTIAGO DEL ESTER").openPopup()
+var marker36=L.marker([8.104116,-80.974792],{alt:'WU XTRA SANTIAGO TERMINAL'}).addTo(map).bindPopup("WU XTRA SANTIAGO TERMINAL").openPopup()
+var marker37=L.marker([-23.675548,-46.678961],{alt:'LOJA WU INTERLAGOS'}).addTo(map).bindPopup("LOJA WU INTERLAGOS").openPopup()
+var marker38=L.marker([-23.641624,-46.734634],{alt:'LOJA WU MORUMBI'}).addTo(map).bindPopup("LOJA WU MORUMBI").openPopup()
+var marker39=L.marker([-23.538667,-46.768403],{alt:'LOJA WU OSASCO'}).addTo(map).bindPopup("LOJA WU OSASCO").openPopup()
+//var marker40=L.marker([.000000,.000000],{alt:'LOJA WU BARUERI'}).addTo(map).bindPopup("LOJA WU BARUERI").openPopup()
+//var marker41=L.marker([.000000,.000000],{alt:'DL FINANCIAL EASTWOOD PARK'}).addTo(map).bindPopup("DL FINANCIAL EASTWOOD PARK").openPopup()
+var marker42=L.marker([-37.996433,-57.552622],{alt:'C.S. MAR DEL PLATA III'}).addTo(map).bindPopup("C.S. MAR DEL PLATA III").openPopup()
+var marker43=L.marker([-34.631873,-58.473242],{alt:'C.S. FLORESTA'}).addTo(map).bindPopup("C.S. FLORESTA").openPopup()
+var marker44=L.marker([-32.883674,-68.840286],{alt:'C.S. MENDOZA III'}).addTo(map).bindPopup("C.S. MENDOZA III").openPopup()
+var marker45=L.marker([17.971927,-76.792776],{alt:'STAPHARM BARBADOS'}).addTo(map).bindPopup("STAPHARM BARBADOS").openPopup()
+var marker46=L.marker([-31.761336,-71.318770],{alt:'CHILEXPRESS SA'}).addTo(map).bindPopup("CHILEXPRESS SA").openPopup()
+var marker47=L.marker([-25.541295,-54.586474],{alt:'LOJAS MM 175 FOZ DO IGUACU'}).addTo(map).bindPopup("LOJAS MM 175 FOZ DO IGUACU").openPopup()
+var marker48=L.marker([-34.595749,-58.427717],{alt:'C.S. VILLA CRESPO'}).addTo(map).bindPopup("C.S. VILLA CRESPO").openPopup()
+var marker49=L.marker([-38.000751,-57.545028],{alt:'C.S. MAR DEL PLATA II'}).addTo(map).bindPopup("C.S. MAR DEL PLATA II").openPopup()
+var marker50=L.marker([18.0920417,-88.6267],{alt:'MISERICORDIA DE DIOS'}).addTo(map).bindPopup("MISERICORDIA DE DIOS").openPopup()
+var marker51=L.marker([-34.639452,-58.526413],{alt:'WEST-LINIERS'}).addTo(map).bindPopup("WEST-LINIERS").openPopup()
+var marker52=L.marker([8.428854,-82.444395],{alt:'WU XTRA DAVID'}).addTo(map).bindPopup("WU XTRA DAVID").openPopup()
+var marker53=L.marker([-34.586879,-58.423449],{alt:'C.S. PALERMO I'}).addTo(map).bindPopup("C.S. PALERMO I").openPopup()
+var marker54=L.marker([-34.567177,-58.437215],{alt:'C.S. SHOPPING SOLAR DE LA ABAD'}).addTo(map).bindPopup("C.S. SHOPPING SOLAR DE LA ABAD").openPopup()
+var marker55=L.marker([-34.609865,-58.402501],{alt:'C.S. ONCE'}).addTo(map).bindPopup("C.S. ONCE").openPopup()
+var marker56=L.marker([-34.606803,-58.424526],{alt:'C.S. ALMAGRO'}).addTo(map).bindPopup("C.S. ALMAGRO").openPopup()
+var marker57=L.marker([-34.604064,-58.412018],{alt:'C.S. ABASTO'}).addTo(map).bindPopup("C.S. ABASTO").openPopup()
+var marker58=L.marker([8.949315,-82.116068],{alt:'FARMACIA E INVERSIONES YAEMI'}).addTo(map).bindPopup("FARMACIA E INVERSIONES YAEMI").openPopup()
+var marker59=L.marker([9.009087,-79.475843],{alt:'SUPER FARMACIA LOS ANGELES'}).addTo(map).bindPopup("SUPER FARMACIA LOS ANGELES").openPopup()
+var marker60=L.marker([17.971927,-76.792776],{alt:'CONTINENTAL ENTERPRISE LTD KI'}).addTo(map).bindPopup("CONTINENTAL ENTERPRISE LTD KI").openPopup()
+var marker61=L.marker([17.488773,-88.188872],{alt:'DIVERSIFIED LIFE SOLUTIONS BEL'}).addTo(map).bindPopup("DIVERSIFIED LIFE SOLUTIONS BEL").openPopup()
+var marker62=L.marker([18.013179,-76.821423],{alt:'TRUE NORTH VENTURE'}).addTo(map).bindPopup("TRUE NORTH VENTURE").openPopup()
+var marker63=L.marker([8.998656,-79.519927],{alt:'MAS ME DAN VISTA HERMOSA'}).addTo(map).bindPopup("MAS ME DAN VISTA HERMOSA").openPopup()
+var marker64=L.marker([9.037657,-79.481150],{alt:'MAS ME DAN VILLA LUCRE'}).addTo(map).bindPopup("MAS ME DAN VILLA LUCRE").openPopup()
+var marker65=L.marker([8.993130,-79.517077],{alt:'MAS ME DAN VIA PORRAS'}).addTo(map).bindPopup("MAS ME DAN VIA PORRAS").openPopup()
+var marker66=L.marker([7.964429,-80.432082],{alt:'MAS ME DAN CHITRE'}).addTo(map).bindPopup("MAS ME DAN CHITRE").openPopup()
+var marker67=L.marker([9.338641,-79.883832],{alt:'MAS ME DAN COLON 4 ALTO'}).addTo(map).bindPopup("MAS ME DAN COLON 4 ALTO").openPopup()
+var marker68=L.marker([8.517871,-82.619779],{alt:'MAS ME DAN BUGABA'}).addTo(map).bindPopup("MAS ME DAN BUGABA").openPopup()
+var marker69=L.marker([7.952949,-80.430300],{alt:'WU XTRA CHITRE'}).addTo(map).bindPopup("WU XTRA CHITRE").openPopup()
+var marker70=L.marker([7.966524,-81.328940],{alt:'COOPERATIVA JUAN XXIII SONA'}).addTo(map).bindPopup("COOPERATIVA JUAN XXIII SONA").openPopup()
+var marker71=L.marker([8.102152,-80.966157],{alt:'WU MACHETAZO SANTIAGO'}).addTo(map).bindPopup("WU MACHETAZO SANTIAGO").openPopup()
+var marker72=L.marker([8.544383,-79.914225],{alt:'WESTERN UNION EL  MACHETAZO CO'}).addTo(map).bindPopup("WESTERN UNION EL  MACHETAZO CO").openPopup()
+var marker73=L.marker([7.964614,-80.431495],{alt:'WU MACHETAZO CHITRE'}).addTo(map).bindPopup("WU MACHETAZO CHITRE").openPopup()
+var marker74=L.marker([8.496798,-80.333975],{alt:'WU MACHETAZO PENONOME'}).addTo(map).bindPopup("WU MACHETAZO PENONOME").openPopup()
+var marker75=L.marker([-32.888706,-68.841552],{alt:'COMMODO CENTRAL'}).addTo(map).bindPopup("COMMODO CENTRAL").openPopup()
+var marker76=L.marker([8.956072,-79.652701],{alt:'WU XTRA ARRAIJAN'}).addTo(map).bindPopup("WU XTRA ARRAIJAN").openPopup()
+var marker77=L.marker([19.485883,-70.711921],{alt:'SUPER PLAZA VENEZUELA'}).addTo(map).bindPopup("SUPER PLAZA VENEZUELA").openPopup()
+var marker78=L.marker([-32.896733,-68.833074],{alt:'C.S. CARREFOUR MENDOZA GUAYMAL'}).addTo(map).bindPopup("C.S. CARREFOUR MENDOZA GUAYMAL").openPopup()
+var marker79=L.marker([7.647593,-80.989127],{alt:'FARMACIA DONA ENILDA'}).addTo(map).bindPopup("FARMACIA DONA ENILDA").openPopup()
+var marker80=L.marker([17.498493,-88.193071],{alt:'GADGETS BRANCH 2'}).addTo(map).bindPopup("GADGETS BRANCH 2").openPopup()
+var marker81=L.marker([17.555216,-88.314212],{alt:'LOW S SUPERMARKET'}).addTo(map).bindPopup("LOW S SUPERMARKET").openPopup()
+var marker82=L.marker([8.923333,-79.704756],{alt:'WU WESTLAND'}).addTo(map).bindPopup("WU WESTLAND").openPopup()
+var marker83=L.marker([7.734943,-80.550996],{alt:'FARMACIA PINZON'}).addTo(map).bindPopup("FARMACIA PINZON").openPopup()
+var marker84=L.marker([8.430318,-82.426349],{alt:'JOY Y EMPENOS LA PERLA 1'}).addTo(map).bindPopup("JOY Y EMPENOS LA PERLA 1").openPopup()
+var marker85=L.marker([17.9685512,-76.79557],{alt:'DANNICO CROSS ROADS'}).addTo(map).bindPopup("DANNICO CROSS ROADS").openPopup()
+var marker86=L.marker([18.026300,-76.832259],{alt:'STAPHARM BOULEVARD'}).addTo(map).bindPopup("STAPHARM BOULEVARD").openPopup()
+var marker87=L.marker([18.026300,-76.832259],{alt:'DANNICO KINGS STREET'}).addTo(map).bindPopup("DANNICO KINGS STREET").openPopup()
+var marker88=L.marker([19.460979,-70.684573],{alt:'SUPERMERCADO CENTRAL  S A'}).addTo(map).bindPopup("SUPERMERCADO CENTRAL  S A").openPopup()
+var marker89=L.marker([18.518970,-69.837270],{alt:'AGENTE DE REMESAS Y CAMBIO VIM'}).addTo(map).bindPopup("AGENTE DE REMESAS Y CAMBIO VIM").openPopup()
+var marker90=L.marker([18.466090,-69.819270],{alt:'AGENTE DE REMESAS Y CAMBIO VIM'}).addTo(map).bindPopup("AGENTE DE REMESAS Y CAMBIO VIM").openPopup()
+var marker91=L.marker([18.484990,-69.840440],{alt:'AGENTE DE REMESAS Y CAMBIO VIM'}).addTo(map).bindPopup("AGENTE DE REMESAS Y CAMBIO VIM").openPopup()
+var marker92=L.marker([17.502670,-88.192520],{alt:'ZITRO INTERNATIONAL LIMITED'}).addTo(map).bindPopup("ZITRO INTERNATIONAL LIMITED").openPopup()
+var marker93=L.marker([17.4943881,-88.1898679],{alt:'DOONYS'}).addTo(map).bindPopup("DOONYS").openPopup()
+var marker94=L.marker([-32.892968,-68.839445],{alt:'LOCUTORIO ALEM'}).addTo(map).bindPopup("LOCUTORIO ALEM").openPopup()
+
+    
+  
+         
+    
+         // create a red polygon from an array of LatLng points
+        //var latlngs1 = [[-33.437237,-70.652423],[-33.402074,-70.642891],[-33.433887,-70.653152]];
+        //var polygon = L.polygon(latlngs1, {color: 'red'}).addTo(map);
+
+        //var latlngs2 = [[8.507948,-80.36196],[9.044618,-79.45079],[8.974279,-79.552591],[8.984647,-79.5235921]];
+        //var polygon = L.polygon(latlngs2, {color: 'red'}).addTo(map);
+
+
+         //leaflet draw
+         var drawFeatures = new L.FeaturesGroup();
+         map.addLayer(drawFeatures);
+
+         var drawControl = new L.Control.Draw({
+            edit: {
+                FeaturesGroup: drawFeatures,
+                remove: false
+            }
+        });
+         map.addControl(drawControl);
+
+         map.on("draw:created", function(e){
+            var type = e.layerType;
+            var layer = e.layer;
+            console.log(e)
+            drawFeatures.addLayer(layer);
+         })
+
+
+    </script>
+
+    
+</body>
+</html>
